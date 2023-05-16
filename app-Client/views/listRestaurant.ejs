@@ -1,0 +1,24 @@
+<%- include("partials/header") %>
+<%- include("partials/body") %>
+  <style>
+    main {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+      flex-wrap: wrap;
+
+    }
+
+    .title {
+      margin: 20px 0px 10px 30px;
+    }
+  </style>
+  <h2 class="title">Restaurants</h2>
+  <main>
+
+    <%restaurants.forEach(restaurant=>{%>
+      <%-include("template/card",{restaurant:restaurant});%>
+        <%});%>
+  </main>
+
+  <%- include("partials/footer") %>
